@@ -1,25 +1,39 @@
-﻿namespace HomeworkWeek4pt1;
+﻿namespace HomeworkWeek4pt2;
 class Program
 {
     static void Main(string[] args)
     {
-// function named largest that takes 2 Integers a and b
-// and return largest one
-        static int largest(int a, int b){  
-        if(a>b){
-        return a;
-    }
-        else if(b>a){
-        return b;
-    }
-        else{
-        return -1;
-    }
-        }
+        
+         int N = 5;
+         string str_shape = Console.ReadLine();
+         Console.WriteLine($"N is: {N}; shape is {str_shape}");
+         Triangle(N, str_shape);
+         static void Triangle(int N, string shape){     
+            if(shape == "left"){
+            for(int row = 0; row<5; row++){
+            for(int col = 0; col<5; col++)
         {
-        int a = 3, b=5;
-        int lar = largest( a, b);
-        Console.WriteLine($"a = {a}; b={b}\nThe largest number is: "+lar);
+        if(row>=col)
+            Console.Write('*');
         }
+        Console.WriteLine("");
     }
-}
+            }  else  {      
+         int val = 5;  
+         int i, j, k ;  
+         for (i = 1; i <= val; i++)  
+         {  
+            for (j = 1; j <= val-i; j++)  
+            {  
+               Console.Write(" ");  
+            }  
+            for (k = 1; k <= i; k++)  
+            {  
+               Console.Write("*");  
+            }  
+            Console.WriteLine("");  }
+         }     
+            }  
+         }
+        
+        }
