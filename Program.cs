@@ -1,31 +1,25 @@
-﻿namespace Homework2;
-// Question 1
+﻿namespace HomeworkWeek4pt1;
 class Program
 {
     static void Main(string[] args)
     {
-   Console.WriteLine("Please input a letter grade:");
-    //get grade from the user
-    char grade=Console.ReadLine()[0];
-    //switch block
-    switch(grade) {
-        //check if grade is A
-        //if A then print 4
-        case 'A': Console.WriteLine("GPA point: 4");
-                  break;
-        case 'B': Console.WriteLine("GPA point: 3");
-                  break;
-        //check if grade C then print 2
-        case 'C': Console.WriteLine("GPA point: 2");
-                  break;
-        case 'D': Console. WriteLine("GPA point: 1");
-                  break;
-        case 'F': Console.WriteLine("GPA point: 0"); 
-                  break; 
-        //if any other letter other then a,b,c,d,f
-        default:  Console.WriteLine("Wrong Letter Grade!");
-                  break;
+// function named largest that takes 2 Integers a and b
+// and return largest one
+        static int largest(int a, int b){  
+        if(a>b){
+        return a;
     }
+        else if(b>a){
+        return b;
+    }
+        else{
+        return -1;
+    }
+        }
+        {
+        int a = 3, b=5;
+        int lar = largest( a, b);
+        Console.WriteLine($"a = {a}; b={b}\nThe largest number is: "+lar);
+        }
     }
 }
-
